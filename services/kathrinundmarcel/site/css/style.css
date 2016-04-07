@@ -23,6 +23,10 @@ body {
 	font-family: 'Tangerine', cursive;
 	}
 
+.carousel-inner > .item {
+    .transition(.1s ease-in-out left);
+}
+
 h1{
 	font-size: 72px;
 }
@@ -87,6 +91,15 @@ hr{
 	text-align: center;
 	font-size: 30px; 	
 }
+.left {
+	position: fixed;
+	top: 50%;
+    text-align: right;
+    float: left;
+    padding-left: 3%;
+    font-size: 28px;
+    
+}
 
 .countdown-row {
 	margin:0 auto;
@@ -120,3 +133,7 @@ hr{
 	font-weight:100;
 }
 
+#impressum{
+	
+	font-family: "Impact", Charcoal, sans-serif;
+}
