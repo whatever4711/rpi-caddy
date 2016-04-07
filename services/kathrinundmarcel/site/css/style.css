@@ -24,7 +24,7 @@ body {
 	}
 
 .carousel-inner > .item {
-    .transition(.1s ease-in-out left);
+    .transition(.2s ease-in-out left);
 }
 
 h1{
