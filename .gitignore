@@ -1,3 +1,5 @@
 config/letsencrypt
 config/logs
+config/conf/available/webserver
+config/conf/enabled/webserver
 *.log
