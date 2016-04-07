@@ -26,8 +26,8 @@ services:
     image: hypriot/rpi-dockerui
     restart: always
     ports:
-      - 192.168.9.1:9000:9000
+      - 9000
     privileged: true
     networks:
-      - frontend
+      - backend 
     command: -e http://192.168.9.1:2378

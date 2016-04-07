@@ -5,9 +5,9 @@ kathrinundmarcel.tk:80 {
 https://kathrinundmarcel.tk {
   tls whatever4711@gmail.com 
   gzip
-  browse
   log / /root/.caddy/logs/inviation.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
-  proxy / invitation:80 {
+  proxy / kathrinundmarcel_invitation_1:80 kathrinundmarcel_invitation_2:80 {
+    policy round_robin
     proxy_header Host {host}
     proxy_header X-Real-IP {remote}
     proxy_header X-Forwarded-Proto {scheme}
