@@ -3,9 +3,6 @@ networks:
   backend:
     external:
       name: rpicaddy_backend
-volumes:
-  site:
-    driver: local
 
 services:
   invitation:
