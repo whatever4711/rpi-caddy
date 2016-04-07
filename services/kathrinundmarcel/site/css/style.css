@@ -50,12 +50,14 @@ h3{
 	opacity:0.9
 }
 
+/* Google Says not needed
 #background{
 	background-image: url('../img/invitation.png');
 	margin:0 auto;
 	background-position: right top;
  	
 }
+*/
 .carousel-control.left,
 .carousel-control.right {
 	background: none
@@ -73,11 +75,6 @@ hr{
 }
 */
 
-
-.month{
-	color: red;
-}
-
 .padding{
 	padding-top: 50px;
     padding-right: 20px;
@@ -85,12 +82,14 @@ hr{
     padding-left: 20px;
 }	
 
+/* Google Says not needed
 #defaultCountdown{	
 	display: inline-block;
 	font-weight: 100;
 	text-align: center;
 	font-size: 30px; 	
-}
+}*/
+
 .left {
 	position: fixed;
 	top: 50%;
@@ -132,8 +131,9 @@ hr{
 	font-size:28px;
 	font-weight:100;
 }
-
+/* Google Says not needed
 #impressum{
 	
 	font-family: "Impact", Charcoal, sans-serif;
 }
+*/
