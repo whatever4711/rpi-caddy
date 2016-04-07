@@ -3,12 +3,16 @@ networks:
   backend:
     external:
       name: rpicaddy_backend
+volumes:
+  site:
+    driver: local
 
 services:
   invitation:
     image: hypriot/rpi-busybox-httpd  
+    restart: always
     volumes:
-      - ./site:/www
+      - $PWD/site:/www
     networks:
       - backend
     expose:

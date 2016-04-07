@@ -2,23 +2,32 @@ version: "2"
 
 networks:
   frontend:
-    driver: bridge
+    driver: overlay
   backend:
-    driver: bridge
+    driver: overlay
 
 services:
   caddy:
     build: .
-    #restart: always
+    restart: always
     networks:
       - frontend
       - backend 
     ports:
-      - 80:80
-      - 443:443
-      - 2015:2015
+      - 141.13.92.71:80:80
+      - 141.13.92.71:443:443
+      - 141.13.92.71:2015:2015
     volumes:
       - ./site:/srv
-      #- ./config/Caddyfile:/etc/Caddyfile
       - ./config:/root/.caddy
     command: --agree --conf /root/.caddy/Caddyfile
+
+  ui:
+    image: hypriot/rpi-dockerui
+    restart: always
+    ports:
+      - 192.168.9.1:9000:9000
+    privileged: true
+    networks:
+      - frontend
+    command: -e http://192.168.9.1:2378
