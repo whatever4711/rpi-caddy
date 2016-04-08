@@ -1,0 +1,15 @@
+guest.kathrinundmarcel.tk:80 {
+  redir https://guest.kathrinundmarcel.tk{uri}
+}
+
+https://guest.kathrinundmarcel.tk {
+  tls whatever4711@gmail.com 
+  gzip
+  log / /root/.caddy/logs/wedding.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
+  basicauth / "django" "django" 
+  proxy / wedding_django_1:8000  {
+    proxy_header Host {host}
+    proxy_header X-Real-IP {remote}
+    proxy_header X-Forwarded-Proto {scheme}
+  }
+}

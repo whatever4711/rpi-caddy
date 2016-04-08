@@ -25,7 +25,7 @@ services:
   ui:
     image: hypriot/rpi-dockerui
     restart: always
-    ports:
+    expose:
       - 9000
     privileged: true
     networks:
