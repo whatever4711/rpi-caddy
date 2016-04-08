@@ -1,5 +1,7 @@
 config/letsencrypt
 config/logs
-config/conf/available/webserver
-config/conf/enabled/webserver
+config/available/dockerui
+config/available/consul
+config/enabled/dockerui
+config/enabled/consul
 *.log

@@ -3,7 +3,7 @@
 #  root /root/.caddy/startpage
 #}
 
-import  /root/.caddy/conf/enabled/*
+import  /root/.caddy/enabled/*
 
 # https://caddyserver.com/blog/caddy-0_8_1-released
 # reload with USR1
