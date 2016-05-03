@@ -8,6 +8,7 @@ https://kathrinundmarcel.tk {
   log / /root/.caddy/logs/inviation.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
   proxy / kathrinundmarcel_invitation_1:80 kathrinundmarcel_invitation_2:80 {
     policy round_robin
+    health_check /index.html
     proxy_header Host {host}
     proxy_header X-Real-IP {remote}
     proxy_header X-Forwarded-Proto {scheme}

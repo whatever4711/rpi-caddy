@@ -7,7 +7,7 @@ https://guest.kathrinundmarcel.tk {
   gzip
   log / /root/.caddy/logs/wedding.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
   basicauth / "django" "django" 
-  proxy / wedding_django_1:8000  {
+  proxy / wedding_django_1:8000 {
     proxy_header Host {host}
     proxy_header X-Real-IP {remote}
     proxy_header X-Forwarded-Proto {scheme}

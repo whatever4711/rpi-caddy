@@ -20,6 +20,8 @@ services:
     volumes:
       - ./site:/srv
       - ./config:/root/.caddy
+    environment:
+      - "constraint:node==roupi"
     command: --agree --conf /root/.caddy/Caddyfile
 
   ui:
@@ -30,4 +32,4 @@ services:
     privileged: true
     networks:
       - backend 
-    command: -e http://192.168.9.1:2378
+    command: -e http://192.168.9.3:2378

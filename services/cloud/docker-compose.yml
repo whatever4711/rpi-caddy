@@ -1,0 +1,44 @@
+version: '2'
+networks:
+  backend:
+    external:
+      name: rpicaddy_backend
+  internal:
+    driver: overlay
+
+#volumes:
+#  data: 
+#    driver: local
+
+services:
+  cloud:
+    image: schoeffm/rpi-owncloud   
+    networks:
+      - backend
+      - internal
+    expose:
+      - 80
+      - 443
+    volumes_from:
+      - data
+    environment:
+      - OWNCLOUD_SERVERNAME=cloud.whatever4711.tk
+  
+  data:
+    image: schoeffm/rpi-owncloud-data
+    environment:
+      - OWNCLOUD_DB_USER=owncloud
+      - OWNCLOUD_DB_PASSWORD=mycloud
+    networks:
+      - internal
+
+  db:
+    image: schoeffm/rpi-owncloud-mysql
+    networks:
+      - internal
+    environment:
+      - OWNCLOUD_DB_USER=owncloud
+      - OWNCLOUD_DB_PASSWORD=mycloud
+      - MYSQL_ROOT_PASSWORD=foo
+    expose:
+      - 3306
