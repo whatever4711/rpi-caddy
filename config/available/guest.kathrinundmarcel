@@ -5,7 +5,7 @@ guest.kathrinundmarcel.tk:80 {
 https://guest.kathrinundmarcel.tk {
   tls whatever4711@gmail.com 
   gzip
-  log / /root/.caddy/logs/wedding.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
+  log / /root/logs/wedding.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
   basicauth / "django" "django" 
   proxy / wedding_django_1:8000 {
     proxy_header Host {host}

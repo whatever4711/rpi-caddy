@@ -2,6 +2,5 @@ config/letsencrypt
 config/logs
 config/available/dockerui
 config/available/consul
-config/enabled/dockerui
-config/enabled/consul
+config/enabled/*
 *.log

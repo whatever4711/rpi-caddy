@@ -1,0 +1,12 @@
+fotos.sky:80 {
+  tls off
+  gzip
+  log / /root/logs/picapport.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
+  proxy / picapport_picapport_1:80 {
+    policy round_robin
+    proxy_header Host {host}
+    proxy_header X-Real-IP {remote}
+    proxy_header X-Forwarded-Proto {scheme}
+  }
+}
+
