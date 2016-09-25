@@ -44,6 +44,10 @@ h3{
 }
 
 a {
+  color: #005666;
+}
+
+#impref {
   color: #104a25;
   font-family: serif;
 }
