@@ -4,6 +4,7 @@
  green: #104a25
  yellow: #ef830e
  red: #ad2c17
+ gray: #807c6e
   */
 body {
  background-image: url('../img/background.png');
@@ -32,6 +33,20 @@ body {
     .transition(.2s ease-in-out left);
 }
 
+.modal-dialog {
+  width:80%;
+  font-family: 'Tangerine';
+}
+
+.modal-content{
+  background-color:#fff8dc;
+}
+.thumbnail {
+  margin-bottom:6px;
+  width:100%;
+  cursor: pointer;
+}
+
 h1{
 	font-size: 72px;
 }
@@ -39,11 +54,56 @@ h1{
 h2{
 	font-size: 48px;
 }
+
 h3{
 	font-size: 38px;
 }
 
+h4{
+	font-size: 26px;
+}
+
+.petrol{
+  color:  #005666;
+}
+
+.red{
+  color: #ad2c17;
+  font-weight: bold;
+}
+
+.gray{
+  color: #807c6e;
+}
+
+.seperator{
+  font-size: 26px;
+  color: #ad2c17;
+}
+
+ul {
+  list-style: none;
+  font-size: 38px;
+}
+
+li {
+  padding-left: 32px;
+  padding: 0;
+  margin: 0;
+  color: #005666;
+}
+
+li:before{
+  content: "♥";
+  padding-right: 16px;
+  color: #ad2c17;
+}
+
 a {
+  color: #005666;
+}
+
+#impref {
   color: #104a25;
   font-family: serif;
 }
@@ -61,19 +121,18 @@ a {
 
 .padding{
 	padding-top: 50px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
 }
 
 .impressum-left {
 	position: fixed;
 	top: 50%;
-    text-align: right;
-    float: left;
-    padding-left: 3%;
-    font-size: 28px;
-
+  text-align: right;
+  float: left;
+  padding-left: 3%;
+  font-size: 26px;
 }
 
 .countdown-row {
@@ -96,15 +155,15 @@ a {
 }
 
 .countdown-amount {
-    font-size: 48px;
+  font-size: 48px;
 	font-weight:700;
 	line-height:70px;
 }
 .countdown-period {
-    display: block;
+  display: block;
 	line-height:60px;
 	color:#ad2c17;
-	font-size:28px;
+	font-size:26px;
 	font-weight:100;
 }
 
@@ -114,4 +173,56 @@ a {
 
 #impressum{
 	font-family: "Impact", Charcoal, sans-serif;
+}
+
+@media (max-width: 500px) {
+  .carousel-outer{
+    width:95%;
+    left:2.5%;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2{
+  	font-size: 24px;
+  }
+
+  h3{
+  	font-size: 20px;
+  }
+
+  h4{
+  	font-size: 18px;
+  }
+
+  ul{
+    font-size: 20px;
+  }
+  .impressum-left{
+    font-size: 18px;
+  }
+  .countdown-section {
+  	width:35px;
+  	height:35px;
+  	border-radius:50%;
+    margin:18px 8px;
+  }
+
+  .countdown-amount {
+    font-size: 22px;
+  	line-height:28px;
+  }
+  .countdown-period {
+  	line-height:36px;
+  	font-size:16px;
+  }
+  .seperator {
+     font-size: 18px;
+  }
+  #impref{
+    font-size: 9px;
+  }
+  .modal-dialog {
+    width:95%;
+  }
 }

@@ -3,7 +3,7 @@ config/logs
 config/available/dockerui
 config/available/consul
 config/available/kathrinundmarcel
-config/enabled/kathrinundmarcel
-config/enabled/dockerui
-config/enabled/consul
+config/enabled/*
+services/kathrinundmarcel/site/index.html
+services/kathrinundmarcel/site/WeddingDates.ics
 *.log

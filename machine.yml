@@ -1,0 +1,39 @@
+version: "2"
+
+networks:
+  frontend:
+    driver: bridge 
+  backend:
+    driver: bridge 
+
+volumes:
+  caddy-logs:
+    driver: local
+
+services:
+  caddy:
+    build: .
+    restart: always
+    networks:
+      - frontend
+      - backend 
+    ports:
+      - 80:80
+      - 443:443
+      - 2015:2015
+    volumes:
+      - ./site:/srv
+      - ./config:/root/.caddy
+      - caddy-logs:/root/logs
+    command: --agree --conf /root/.caddy/Caddyfile
+
+  ui:
+    image: hypriot/rpi-dockerui
+    restart: always
+    expose:
+      - 9000
+    privileged: true
+    networks:
+      - backend 
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro

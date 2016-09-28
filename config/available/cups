@@ -1,0 +1,11 @@
+cups.sky:80 {
+  tls off 
+  gzip
+  log / /root/logs/cups.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
+  proxy / 192.168.47.11:631 {
+    policy round_robin
+    proxy_header Host {host}
+    proxy_header X-Real-IP {remote}
+    proxy_header X-Forwarded-Proto {scheme}
+  }
+}

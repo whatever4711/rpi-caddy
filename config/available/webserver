@@ -5,5 +5,5 @@ whatever4711.tk:80 {
 https://whatever4711.tk {
   tls whatever4711@gmail.com
   gzip 
-  log / /root/.caddy/logs/webserver.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
+  log / /root/logs/webserver.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
 }
