@@ -2,6 +2,7 @@ config/letsencrypt
 config/logs
 config/available/dockerui
 config/available/consul
+config/available/kathrinundmarcel
 config/enabled/*
 services/kathrinundmarcel/site/index.html
 *.log
