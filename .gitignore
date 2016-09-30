@@ -3,5 +3,5 @@ config/logs
 config/available/dockerui
 config/available/consul
 config/enabled/*
-/services/kathrinundmarcel/site/index.html
+services/kathrinundmarcel/site/index.html
 *.log
