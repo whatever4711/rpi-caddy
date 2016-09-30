@@ -28,3 +28,7 @@ $(".impressum").click(function () {
 
 ga('create', 'UA-76121515-1', 'auto');
 ga('send', 'pageview');
+
+$(function () {
+	$(".seperator").html("&emsp;&hearts;&emsp;&hearts;&emsp;&hearts;&emsp;&hearts;&emsp;&hearts;");
+});

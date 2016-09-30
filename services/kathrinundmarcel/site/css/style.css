@@ -4,6 +4,7 @@
  green: #104a25
  yellow: #ef830e
  red: #ad2c17
+ gray: #807c6e
   */
 body {
  background-image: url('../img/background.png');
@@ -39,8 +40,49 @@ h1{
 h2{
 	font-size: 48px;
 }
+
 h3{
 	font-size: 38px;
+}
+
+h4{
+	font-size: 26px;
+}
+
+.petrol{
+  color:  #005666;
+}
+
+.red{
+  color: #ad2c17;
+  font-weight: bold;
+}
+
+.gray{
+  color: #807c6e;
+}
+
+.seperator{
+  font-size: 26px;
+  color: #ad2c17;
+}
+
+ul {
+  list-style: none;
+  font-size: 38px;
+}
+
+li {
+  padding-left: 32px;
+  padding: 0;
+  margin: 0;
+  color: #005666;
+}
+
+li:before{
+  content: "♥";
+  padding-right: 16px;
+  color: #ad2c17;
 }
 
 a {
