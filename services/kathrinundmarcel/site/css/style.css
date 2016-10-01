@@ -115,11 +115,10 @@ a {
 .impressum-left {
 	position: fixed;
 	top: 50%;
-    text-align: right;
-    float: left;
-    padding-left: 3%;
-    font-size: 26px;
-
+  text-align: right;
+  float: left;
+  padding-left: 3%;
+  font-size: 26px;
 }
 
 .countdown-row {
@@ -142,12 +141,12 @@ a {
 }
 
 .countdown-amount {
-    font-size: 48px;
+  font-size: 48px;
 	font-weight:700;
 	line-height:70px;
 }
 .countdown-period {
-    display: block;
+  display: block;
 	line-height:60px;
 	color:#ad2c17;
 	font-size:26px;
@@ -163,6 +162,7 @@ a {
 }
 
 @media (max-width: 500px) {
+
   h1 {
     font-size: 32px;
   }
@@ -177,19 +177,32 @@ a {
   h4{
   	font-size: 18px;
   }
+
   ul{
     font-size: 20px;
   }
   .impressum-left{
     font-size: 18px;
   }
-  .countdown-amount{
-    font-size: 24px;
+  .countdown-section {
+  	width:38px;
+  	height:38px;
+  	border-radius:50%;
+    margin:20px 10px;
   }
-  .countdown-period{
-    font-size: 18px;
+
+  .countdown-amount {
+    font-size: 24px;
+  	line-height:30px;
+  }
+  .countdown-period {
+  	line-height:38px;
+  	font-size:18px;
   }
   .seperator {
      font-size: 18px;
+  }
+  #impref{
+    font-size: 9px;
   }
 }
