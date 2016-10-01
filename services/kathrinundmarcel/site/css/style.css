@@ -118,7 +118,7 @@ a {
     text-align: right;
     float: left;
     padding-left: 3%;
-    font-size: 28px;
+    font-size: 26px;
 
 }
 
@@ -150,7 +150,7 @@ a {
     display: block;
 	line-height:60px;
 	color:#ad2c17;
-	font-size:28px;
+	font-size:26px;
 	font-weight:100;
 }
 
@@ -160,4 +160,33 @@ a {
 
 #impressum{
 	font-family: "Impact", Charcoal, sans-serif;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2{
+  	font-size: 24px;
+  }
+
+  h3{
+  	font-size: 20px;
+  }
+
+  h4{
+  	font-size: 18px;
+  }
+  ul{
+    font-size: 20px;
+  }
+  .impressum-left{
+    font-size: 18px;
+  }
+  .countdown-amount{
+    font-size: 24px;
+  }
+  .countdown-period{
+    font-size: 18px;
+  }
 }
