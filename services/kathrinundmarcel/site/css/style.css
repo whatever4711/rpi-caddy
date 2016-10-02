@@ -67,6 +67,11 @@ h4{
   color: #ad2c17;
 }
 
+.imagebox{
+  margin: 0 auto;
+  padding: 20px;
+}
+
 ul {
   list-style: none;
   font-size: 38px;
@@ -107,9 +112,9 @@ a {
 
 .padding{
 	padding-top: 50px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
 }
 
 .impressum-left {
