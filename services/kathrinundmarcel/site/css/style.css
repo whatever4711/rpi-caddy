@@ -32,6 +32,16 @@ body {
 .carousel-inner > .item {
     .transition(.2s ease-in-out left);
 }
+.modal-dialog {
+  width:80%;
+  background:#fff8dc;
+  font-family: 'Tangerine';
+}
+
+.thumbnail {
+  margin-bottom:6px;
+  width:100%;
+}
 
 h1{
 	font-size: 72px;
@@ -65,11 +75,6 @@ h4{
 .seperator{
   font-size: 26px;
   color: #ad2c17;
-}
-
-.imagebox{
-  margin: 0 auto;
-  padding: 20px;
 }
 
 ul {
@@ -167,7 +172,10 @@ a {
 }
 
 @media (max-width: 500px) {
-
+  .carousel-outer{
+    width:95%;
+    left:2.5%;
+  }
   h1 {
     font-size: 32px;
   }
@@ -209,5 +217,8 @@ a {
   }
   #impref{
     font-size: 9px;
+  }
+  .modal-dialog {
+    width:95%;
   }
 }
