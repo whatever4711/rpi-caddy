@@ -37,6 +37,10 @@ function modal(elem){
 	$('.modal-body').empty();
 	var title = elem.alt;
 	$('.modal-title').html(title);
-	$($(elem).parents('div').html()).attr('onclick','').css({"cursor":"default"}).appendTo('.modal-body');
+	var imagediv =	$($(elem).parents('div').html());
+	imagediv.attr('onclick','');
+	imagediv.css({"cursor":"default"});
+	imagediv.attr("src", imagediv.attr("src").replace("-thumbnail",""));
+	imagediv.appendTo('.modal-body');
 	$('#myModal').modal({show:true});
 }
