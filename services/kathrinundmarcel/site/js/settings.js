@@ -37,6 +37,6 @@ function modal(elem){
 	$('.modal-body').empty();
 	var title = elem.alt;
 	$('.modal-title').html(title);
-	$($(elem).parents('div').html()).attr('onclick','').appendTo('.modal-body');
+	$($(elem).parents('div').html()).attr('onclick','').css({"cursor":"default"}).appendTo('.modal-body');
 	$('#myModal').modal({show:true});
 }
