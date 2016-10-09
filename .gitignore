@@ -5,4 +5,5 @@ config/available/consul
 config/available/kathrinundmarcel
 config/enabled/*
 services/kathrinundmarcel/site/index.html
+services/kathrinundmarcel/site/WeddingDates.ics
 *.log
