@@ -1,0 +1,12 @@
+portainer.whatever4711.tk:80 {
+  redir https://portainer.whatever4711.tk{uri}
+}
+
+https://portainer.whatever4711.tk {
+  tls whatever4711@gmail.com
+  gzip 
+  log / /root/.caddy/logs/portainer.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
+  proxy / 192.168.9.1:999 192.168.9.3:999 {
+    transparent
+  }
+}

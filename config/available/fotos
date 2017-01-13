@@ -1,0 +1,14 @@
+fotos.kathrinundmarcel.tk:80 {
+  redir https://fotos.kathrinundmarcel.tk{uri}
+}
+
+https://fotos.kathrinundmarcel.tk {
+  tls whatever4711@gmail.com 
+  gzip
+  log / /root/.caddy/logs/fotos.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
+  proxy / 192.168.9.1:777 192.168.9.3:777 192.168.9.5:777 {
+    policy round_robin
+    health_check /index.html
+    transparent
+  }
+}

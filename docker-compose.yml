@@ -1,0 +1,45 @@
+version: "2"
+
+networks:
+  frontend:
+    driver: bridge 
+  backend:
+    driver: bridge 
+
+volumes:
+  caddy-logs:
+    driver: local
+#  nc-static:
+#    driver: nfs
+#    driver_opts:
+#      share: "cubietruck.mg:/home/marcel/clouddata/Wedding/nc_www"
+
+services:
+  caddy:
+    image: whatever4711/caddy:armhf
+    restart: always
+    networks:
+      - frontend
+      - backend 
+    ports:
+      - 141.13.92.71:80:80
+      - 141.13.92.71:443:443
+      - 141.13.92.71:2015:2015
+    volumes:
+      - ./site:/srv
+      - ./config:/root/.caddy
+      - caddy-logs:/root/logs
+      # - nc-static:/nextcloud
+    command: --agree --conf /root/.caddy/Caddyfile
+
+  ui:
+    image: hypriot/rpi-dockerui:v0.10.1
+    restart: always
+    expose:
+      - 9000
+    privileged: true
+    networks:
+      - backend 
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+  

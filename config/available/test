@@ -1,0 +1,6 @@
+http://141.13.92.34:80 {
+  tls off
+  proxy / 192.168.9.3:8080 {
+    transparent
+  }
+}

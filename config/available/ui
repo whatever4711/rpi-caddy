@@ -4,8 +4,6 @@ ui.sky:80 {
   log / /root/logs/ui.log "{proto} Request: {method} {path} ... {scheme} {host} {remote}"
   proxy / rpicaddy_ui_1:9000 {
     policy round_robin
-    proxy_header Host {host}
-    proxy_header X-Real-IP {remote}
-    proxy_header X-Forwarded-Proto {scheme}
+    transparent
   }
 }
