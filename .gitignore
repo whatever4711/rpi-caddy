@@ -7,3 +7,9 @@ config/enabled/*
 services/kathrinundmarcel/site/index.html
 services/kathrinundmarcel/site/WeddingDates.ics
 *.log
+roupi.yml
+config/acme/*
+config/available/monitcollector
+config/available/swarm
+config/ocsp/*
+
